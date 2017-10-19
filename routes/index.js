@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var mongo  = require("mongojs");
-var db = mongo('mongodb://crook:test@ds141108.mlab.com:41108/site',['Users'])
+var db = mongo('mongodb://<host>/<database>',['<collection>'])
 //root
 router.get("/",function(req,res,next){
     res.render("index.html");
